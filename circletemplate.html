@@ -1,0 +1,53 @@
+<html>
+<style>
+
+</style>
+<body>
+  <svg width="720" height="720">
+    <circle cx="40" cy="60" r="10"></circle>
+    <circle cx="80" cy="60" r="10"></circle>
+    <circle cx="120" cy="60" r="10"></circle>
+  </svg>
+
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script>
+
+  // //-Step #1, selecting all circles, and applying style to each one
+  // var svg = d3.select("svg");
+  // var circle = svg.selectAll("circle");
+  // circle.style("fill", "steelblue");
+  // circle.attr("r", 30);
+
+  // //-Step #2, randomize the position of each circles x coordinate
+  // circle.attr("cx", function() { return Math.random() * 720; });
+
+  // //-Step #3, bind data to seperate elements
+  // circle.data([32, 57, 112]);
+  // //uses a function to apply the data to whatever parameter you want. here we chose radius ("r")
+  // circle.attr("r", function(d) { return Math.sqrt(d); });
+
+  // //-Step #Optional, can use the index of an element in its selection. this will override you function above.
+  // // circle.attr("cx", function(d, i) { return i * 100 + 30; });
+
+  // //-Step #4, create a 4th circle using .enter method -When joining data to elements, D3 puts any leftover data — or equivalently “missing” elements — in the enter selection
+  // var circle = svg.selectAll("circle").data([32, 57, 112, 293]);
+  // var circleEnter = circle.enter().append("circle");
+
+  // //-Step #5, provide the new circle with r, cx and cy attributes
+  // circleEnter.attr("cy", 60);
+  // circleEnter.attr("cx", function(d, i) { return i * 100 + 30; });
+  // circleEnter.attr("r", function(d) { return Math.sqrt(d); });
+  // //must reapply color
+  // circle.style("fill", "steelblue");
+
+  // //-Step #6, remove a circle with exit method. allows you to select multiple elements
+  // // var circle = svg.selectAll("circle")
+  // // .data([32, 57]function(d) { return(d); });
+  // // circle.exit().remove();
+
+  // //-Step #7, us this code in the DOM
+  // .data([32, 57, 293], function(d) { return d; });
+
+</script>
+</body>
+</html>
