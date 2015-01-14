@@ -35,10 +35,17 @@ how bout now? test... go
 
 
 
+
+
+
+
+
+
+
 glossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossary
 
 
-#Selecting Elements
+*Selecting Elements
 —selection: the array of elements pulled from the current document. 	
 
 —d3.selectAll: a method that selects all elements that match the specified selector. The elements will be selected in the document from top-to-bottom. 
@@ -54,12 +61,12 @@ selection.property(name:value)
 —shapes: SVG has a number of built-in simple shapes, such as axis-aligned rectangles and circles. For greater flexibility, you can draw shapes using D3's path data generators. 
 
 	
-#Binding Data
+*Binding Data
 
 —selection.data: Joins the specified array of data with the current selection. The specified values is an array of data values (like numbers or objects) or a function that returns an array of values. 
 
 
-#Entering Elements
+*Entering Elements
 
 —enter: Returns placeholder nodes for each data element in the current selection that doesn’t have a corresponding existing DOM element.
  selection.enter()
@@ -69,9 +76,12 @@ selection.append(name)
 —Method Chaining: syntax that allows several method calls to be chained together in a single statement.
 
 
-#Exiting Elements	
+*Exiting Elements	
 
 —exit: returns  the existing DOM elements in the current selection for which no new data element was found.
 selection.exit()
 —remove: Removes the elements in the current selection from the current document. 
 selection.remove()
+
+*All Together
+n/a
