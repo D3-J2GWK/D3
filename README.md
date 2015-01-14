@@ -36,7 +36,7 @@ how bout now? test... go
 
 
 glossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossary
-Three Little Circles
+
 
 #Selecting Elements
 —selection: the array of elements pulled from the current document. 	
