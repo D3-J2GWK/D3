@@ -53,18 +53,21 @@ Bound data can be used as the first argument of a function used in an attr or st
 ```javascript
 circle.attr("cx", function(d, i) { return i * 100 + 30; });
 ```
+in this next example, there is a data array with a 4th element inside, “293.” Because “293” does not have a corresponding DOM element to append to, we must use the .enter().append() methods. This will create an additional circle in which we can provide it with a radius of 293.
 ```javascript
 var circle = svg.selectAll("circle").data([32, 57, 112, 293]);
 var circleEnter = circle.enter().append("circle");
 ```
+It is necessary when using these methods that elements are appended and selected from their correct parent element. In this case: 293 is attached to its parent data, which is the child of circle, which is selected from its parent element of svg. 
+
+
 ```javascript
 var circle = svg.selectAll("circle")
 .data([32, 57]
 circle.exit().remove();
 ``` 
 
-glossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossary
-
+##Glossary 
 
 *Selecting Elements
 —selection: the array of elements pulled from the current document. 	
