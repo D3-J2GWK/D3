@@ -12,7 +12,6 @@ The give you a better idea of it's capabilites let's look at the following examp
   * Paul MacGregors: [Home Page]( http://p--m.co/ )
   
 
--http://p--m.co/
 ##Background
 Mike Bostock
 how bout now? test... go
