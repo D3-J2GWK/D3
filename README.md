@@ -1,6 +1,6 @@
 #D3 Tutorial
 ##Data Visualization
-One of the hotestest technology keywords used today across all industries is Data Visualization.  The primary goal of DV has been to communicate information clearly and efficiently and, for the longest time, been limited to using standard excel-like graphs(line,bar,ect...).  However today's marketplace demands greater innovation and flexibiliy and as such the open source community has opened it's doors and taken DV to new heights.  
+One of the hotest technology keywords used today across all industries is Data Visualization.  The primary goal of DV has always been to communicate information clearly and efficiently and, for the longest time, been limited to using standard excel-like graphs(line,bar,ect...).  However as today's marketplace demands greater innovation and flexibiliy in HOW the data is displaed the open source community has stepped up to the challenge and created some amazing tools and javascript librarys to make creating amazing DV's possible.  The only limitation...your imagintion.  
 ##Background
 Mike Bostock
 how bout now? test... go
