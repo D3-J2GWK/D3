@@ -11,6 +11,7 @@ The give you a better idea of it's capabilites let's look at the following examp
   * Mike Bostock's: [Congressional Network Analysis](http://christopherroach.com/pydata2013/)
   * Paul MacGregors: [Home Page]( http://p--m.co/ )
 
+D3 is very frequently used in conjunction with the <svg> (scalable vector graphics) HTML tag, and it will also be used for the purpose of this tutorial. There is a “height" and "width" attibute for the svg tag that define the dimensions of the element. Within the <svg> tags, we will be placing <circle> tags, which creates a circle svg. <circle> tags have “cx” and “cy” attributes, that determine the coordinates for the center of the circle graphics in relation to the top left of the svg element. There is also a “r” attribute for radius, and “fill” will determine the color within the borders of the graphic.
 
 ```javascript
 <body>
@@ -25,26 +26,30 @@ at the bottom of the body tag and inside a script tag, place a source tag:
 ```javascript
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"> </script>
 ```
-
+To begin implementing d3 within the html, we need to use d3 select methods to assign elements of the DOM to javascript variables. d3.select(“svg”) will return the first element with the DOM that is a <svg>, svg.selectAll(“circle”) will return all <circle> elements from the document inside an array. 
 
 ```javascript
 var svg = d3.select("svg");
 var circle = svg.selectAll("circle");
 ```
-
+Now that all the circles are assigned to the circles array, we can begin to use D3’s .style and .attr methods to change their appearance and location.
 
 ```javascript
 circle.style("fill", "steelblue");
 circle.attr("r", 30);
 ```
+The above code will change the value of “fill” to the color ”steelblue" for every circle on the page. Any value that can be set on the circles( or any element) through css , can be changed by the style method. Had we used standard javascript, we would have to explicitly iterate through the “circle” array, this is not the case with D3. The .attr works in a manner similar to the .style method. The attribute to be changed is specified first, in the above case the “r” attribute, followed by the value of 30. An anonymous function may be used in place of a specific value, this is what allows data to be applied to the html in ways that are visually dramatic.
 
 ```javascript
 circle.attr("cx", function() { return Math.random() * 720; });
 ```
+The .data method is a crucial part of what makes D3 so powerful. It is what binds the data to the selected elements, which can then in turn be assigned to different values or passed into functions as mentioned previously. Each piece of data in the array below, will be bound to the circle with a corresponding index in the "circle" array.
 
 ```javascript
 circle.data([32, 57, 112]);
 ```
+Bound data can be used as the first argument of a function used in an attr or style method, and conventionally it will be represented with a “d”. The index of the element within the larger array is also available as a second argument. This can be useful when positioning elements relative to one another in a deliberate manner.
+
 ```javascript
 circle.attr("cx", function(d, i) { return i * 100 + 30; });
 ```
