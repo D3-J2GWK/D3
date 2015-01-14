@@ -50,7 +50,15 @@ circle.data([32, 57, 112]);
 ```javascript
 circle.attr("cx", function(d, i) { return i * 100 + 30; });
 ```
-  
+```javascript
+var circle = svg.selectAll("circle").data([32, 57, 112, 293]);
+var circleEnter = circle.enter().append("circle");
+```
+```javascript
+var circle = svg.selectAll("circle")
+.data([32, 57]
+circle.exit().remove();
+``` 
 
 glossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossary
 
