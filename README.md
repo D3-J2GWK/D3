@@ -20,12 +20,10 @@ The give you a better idea of it's capabilites let's look at the following examp
   <circle cx="120" cy="60" r="10"></circle>
 </svg>
 ```  
-at the bottom of the body tag and inside a script tage, place a source tag:
+at the bottom of the body tag and inside a script tag, place a source tag:
 
 ```javascript
-<script
-src="http://d3js.org/d3.v3.min.js" charset="utf-8">
-</script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"> </script>
 ```
 
 
