@@ -1,6 +1,6 @@
-D3 Tutorial
-Background
-Mike Bostock
+###D3 Tutorial
+-Background
+-Mike Bostock
 - SVG vs. Canvas
 - Structure
 - Functions
