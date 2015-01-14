@@ -12,36 +12,6 @@ The give you a better idea of it's capabilites let's look at the following examp
   * Paul MacGregors: [Home Page]( http://p--m.co/ )
   
 
-##Background
-Mike Bostock
-how bout now? test... go
-- SVG vs. Canvas
-- Structure
-- Functions
-  - update
-  - shuffle
-- methods
-  - attr.
-  - styles.
-  - data.
-- using it
-  - what is it?
-  - how does it work?
-  - this is a test
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 glossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossary
 
 
