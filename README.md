@@ -10,6 +10,46 @@ The give you a better idea of it's capabilites let's look at the following examp
   * NYTimes article: ["A Chicago divided By Killings" ](http://www.nytimes.com/interactive/2013/01/02/us/chicago-killings.html) 
   * Mike Bostock's: [Congressional Network Analysis](http://christopherroach.com/pydata2013/)
   * Paul MacGregors: [Home Page]( http://p--m.co/ )
+
+
+```javascript
+<body>
+<svg width="720" height="720">
+  <circle cx="40" cy="60" r="10"></circle>
+  <circle cx="80" cy="60" r="10"></circle>
+  <circle cx="120" cy="60" r="10"></circle>
+</svg>
+```  
+at the bottom of the body tag and inside a script tage, place a source tag:
+
+```javascript
+<script
+src="http://d3js.org/d3.v3.min.js" charset="utf-8">
+</script>
+```
+
+
+```javascript
+var svg = d3.select("svg");
+var circle = svg.selectAll("circle");
+```
+
+
+```javascript
+circle.style("fill", "steelblue");
+circle.attr("r", 30);
+```
+
+```javascript
+circle.attr("cx", function() { return Math.random() * 720; });
+```
+
+```javascript
+circle.data([32, 57, 112]);
+```
+```javascript
+circle.attr("cx", function(d, i) { return i * 100 + 30; });
+```
   
 
 glossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossary
