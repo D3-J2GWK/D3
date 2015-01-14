@@ -1,5 +1,5 @@
 ###D3 Tutorial
--Background
+Background
 -Mike Bostock
 - SVG vs. Canvas
 - Structure
