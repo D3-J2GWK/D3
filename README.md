@@ -28,3 +28,50 @@ how bout now? test... go
   - what is it?
   - how does it work?
   - this is a test
+
+
+
+
+
+
+
+glossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossary
+Three Little Circles
+
+#Selecting Elements
+—selection: the array of elements pulled from the current document. 	
+
+—d3.selectAll: a method that selects all elements that match the specified selector. The elements will be selected in the document from top-to-bottom. 
+
+—selection.style: sets the CSS style property with the specified name to the specified value on all selected elements. 
+selection.style(name:value)
+—selection.property: sets the property with the specified name to the specified value on all selected elements. This can be used for the HTML elements have special properties that are not addressable using standard attributes or styles.
+selection.property(name:value)
+
+—scales: are an optional feature in D3. They are functions that map from an input domain (like a a set of numbers or names) to an output range. They can be used to simplify the code needed to map a dimension of data to a visual representation.
+ 
+
+—shapes: SVG has a number of built-in simple shapes, such as axis-aligned rectangles and circles. For greater flexibility, you can draw shapes using D3's path data generators. 
+
+	
+#Binding Data
+
+—selection.data: Joins the specified array of data with the current selection. The specified values is an array of data values (like numbers or objects) or a function that returns an array of values. 
+
+
+#Entering Elements
+
+—enter: Returns placeholder nodes for each data element in the current selection that doesn’t have a corresponding existing DOM element.
+ selection.enter()
+
+—append: Appends a new element with the specified name as the last child of each element in the current selection, returning a new selection containing the appended elements.
+selection.append(name)
+—Method Chaining: syntax that allows several method calls to be chained together in a single statement.
+
+
+#Exiting Elements	
+
+—exit: returns  the existing DOM elements in the current selection for which no new data element was found.
+selection.exit()
+—remove: Removes the elements in the current selection from the current document. 
+selection.remove()
