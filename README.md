@@ -8,7 +8,7 @@ D3 stands for Data Driven Documentation and is a JavaScript library created by M
 The give you a better idea of it's capabilites let's look at the following examples:
 
   * NYTimes article: ["A Chicago divided By Killings" ](http://www.nytimes.com/interactive/2013/01/02/us/chicago-killings.html) 
-  * 
+  * Paul MacGregors [Home Page]( http://p--m.co/ )
   
 
 -http://p--m.co/
