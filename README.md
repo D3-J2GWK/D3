@@ -1,6 +1,7 @@
 D3 Tutorial
 Background
 Mike Bostock
+how bout now? test... go
 - SVG vs. Canvas
 - Structure
 - Functions
