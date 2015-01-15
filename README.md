@@ -60,8 +60,7 @@ var circleEnter = circle.enter().append("circle");
 ```
 It is necessary when using these methods that elements are appended and selected from their correct parent element. In this case: 293 is attached to its parent data, which is the child of circle, which is selected from its parent element of svg. 
 
-This next steps take a circle away from the page. similar to previous steps, we have to select an elemnt by following its parent elements. howver when removing elements it is as though we are swapping new arrays out with old ones. the .data adds a new array of radiuses. 
-
+ 
 
 This next steps take circles off of the page. similar to previous steps, we have to select an element by following its parent elements. however when removing elements it is as though we are swapping new arrays out with old ones. the .data adds a new array of circle radiuses. the .exit method applies it to the circle variable, and the .remove() method removes the previous array of [32, 57, 112, 293]. 
 ```javascript
