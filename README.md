@@ -10,7 +10,6 @@ The give you a better idea of it's capabilites let's look at the following examp
   * NYTimes article: ["A Chicago divided By Killings" ](http://www.nytimes.com/interactive/2013/01/02/us/chicago-killings.html) 
   * Mike Bostock's: [Congressional Network Analysis](http://christopherroach.com/pydata2013/)
   * Paul MacGregors: [Home Page]( http://p--m.co/ )
-  * [Koalas to the Max](http://www.koalastothemax.com/)
 
 Check out the following [site](http://techslides.com/over-2000-d3-js-examples-and-demos) to see over 2000 additional samples
 ##Demo
@@ -32,7 +31,9 @@ In order to actually start using D3 we will need to make sure it is referenced s
 ```javascript
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"> </script>
 ```
-To begin implementing D3 we need to use it's select() and selectAll() methods to begin assigning the existing svg and circle elements of the DOM to javascript variables. D3.select(“svg”) will return the first element in the document with the specified selector, in this case the <svg> tag.  The svg.selectAll(“circle”) will then return ALL <circle> elements that are children of the svg.  Take moment to uncomment this line of code in the Step 1 section of the template and refresh your browswer.
+To begin implementing D3 we need to use it's select() and selectAll() methods to begin assigning the existing svg and circle elements of the DOM to javascript variables. D3.select(“svg”) will return the first element in the document with the specified selector, in this case the <svg> tag.  The svg.selectAll(“circle”) will then return ALL <circle> elements that are children of the svg.  
+
+Take moment to uncomment this line of code in the Step 1 section of the template and refresh your browswer.
 
 ```javascript
 var svg = d3.select("svg");
@@ -40,34 +41,50 @@ var circle = svg.selectAll("circle");
 ```
 Now that all the circles are assigned to the circles array, we can begin to use D3’s .style and .attr methods to change their appearance and location.
 
+Take moment to uncomment this line of code in the Step 2 section of the template and refresh your browswer.
+
 ```javascript
 circle.style("fill", "steelblue");
 circle.attr("r", 30);
 ```
 The above code will change the value of “fill” to the color ”steelblue" for every circle on the page. Any value that can be set on the circles through css, can be changed using the style method. Had we used standard javascript, we would have to explicitly iterate through the “circle” array however D3 does a great job of doing this for us. Go D3...GO...The .attr works in a manner similar to the .style method. The attribute to be changed is specified first, in the above case the “r” attribute, followed by the value of 30. 
 
+Take moment to uncomment this line of code in the Step 3 section of the template and refresh your browswer.
+
 ```javascript
 circle.attr("cx", function() { return Math.random() * 720; });
 ```
 The .data method is a crucial part of what makes D3 so powerful. It is what binds the data to the selected elements, which then in turn can be assigned to different values or passed into functions as mentioned previously. Each piece of data in the array below, will be imported and bound toa corresponding index and key in the "circle" array.
+
+Take moment to uncomment the code in Step 4 section of the template and refresh your browswer.
 
 ```javascript
 circle.data([32, 57, 112]);
 ```
 Bound data can be passed as the first argument of a function used in an attr or style method, and D3 accesses this key using the built-in “d” variable. The index of the element within its array is also available as a second predefined variable. This can be useful when positioning elements relative to one another in a deliberate manner.
 
+Take moment to uncomment the code in Step 5 section of the template and refresh your browswer.
 ```javascript
 circle.attr("cx", function(d, i) { return i * 100 + 30; });
 ```
 in this next example, there is a data array with a 4th element inside, “293.” Because 293 does not have a corresponding DOM element to append to, we must use the .enter().append() methods to create an additional circle in which we can provide it with additoinal attributes. 
+
+Take moment to uncomment the code in the Step 6 section of the template and refresh your browswer.
 ```javascript
-var circle = svg.selectAll("circle").data([32, 57, 112, 293]);
-var circleEnter = circle.enter().append("circle");
+  var circle = svg.selectAll("circle").data([32, 57, 112, 293]);
+  var circleEnter = circle.enter().append("circle");
+  //provide the new circle with r, cx and cy attributes
+  circleEnter.attr("cy", 60);
+  circleEnter.attr("cx", function(d, i) { return i * 100 + 30; });
+  circleEnter.attr("r", function(d) { return Math.sqrt(d); });
+  //must reapply color
+  circle.style("fill", "steelblue");
 ```
 The next step takes circles off of the page. similar to previous steps, we have to select an element by following its parent elements. however when removing elements it is as though we are swapping new arrays out with old ones. The .data() method adds a new array of circle attributes and the .exit() method applies passes these existing elements to the .remove() method never to be seen again. 
+
+Take moment to uncomment this line of code in the Step 7 section of the template and refresh your browswer.
 ```javascript
-var circle = svg.selectAll("circle")
-.data([32, 57]
+var circle = svg.selectAll("circle").data([32, 57, 112, 293]
 circle.exit().remove();
 ``` 
 
