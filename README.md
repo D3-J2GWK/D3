@@ -26,7 +26,7 @@ Check out the following [site](http://techslides.com/over-2000-d3-js-examples-an
 ##Demo
 The following demo has been created to walk through the basics of D3 by creating circles.  A [circletempale.html](https://github.com/D3-J2GWK/D3/blob/master/circletemplate.html) file has been provided to help faciliate the excercise and only requires that the code blocks be uncommented in order to execute the code blocks.  Please take a moment to download and run in your browser.
 
-D3 is very frequently used in conjunction with the <svg> tag and is used to create scalable vector graph images which contain many of the same properties used by the <canvas> tag.  There is a “height" and "width" attibute that define the dimensions of the element and within the <svg> tags we will be adding one or more <circle> tags, to generalte...well...circles.  Circles require the “cx”,“cy” and "r" attributes, which determine the coordinates for placement and size of the circle.
+D3 is very frequently used in conjunction with the <svg> tag and is used to create [scalable vector graph](https://github.com/ritchieking/d3-book/tree/master/Chapter%203) images which contain many of the same properties used by the <canvas> tag.  There is a “height" and "width" attibute that define the dimensions of the element and within the <svg> tags we will be adding one or more <circle> tags, to generalte...well...circles.  Circles require the “cx”,“cy” and "r" attributes, which determine the coordinates for placement and size of the circle.
 
 So even without even using D3 one is still able to generate circles using the following lines which has also been included in the template.
 
