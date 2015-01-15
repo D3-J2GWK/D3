@@ -99,7 +99,7 @@ Now the Update phase to edit properties of any previous existing data. Here we s
 ```   
 Now we enter the Enter() phase. Once again the transision() method is being used to visually change the data as well as reposition all data. Pay particular attention the the pre .attr("y", -60) and post .attr("y", 0) attribute values and style().  
 
-``javascript
+```javascript
      // ENTER
     // Create new elements as needed.
       text.enter().append("text")
@@ -113,8 +113,9 @@ Now we enter the Enter() phase. Once again the transision() method is being used
       .duration(750)
       .attr("y", 0)
       .style("fill-opacity", 1);
+      
 ```
-Finally the Exit() phase where data is tranistioned out of the vis. 
+Finally the Exit() phase where data is tranistioned out of the vis. Yet again pay attention to the .attr("y", 60) and .style("fill-opacity", 1e-6) attribute values along with the remove() method. 
 
 ```javascript
   // EXIT
@@ -129,11 +130,15 @@ Finally the Exit() phase where data is tranistioned out of the vis.
 ```
    
 ##Bonus
-You must edit at least two of the four attributes we demonstrated in [link to file](url) and [link to file](url) (x axis, y axis, color, and opacity), but you are welcome to experiment further.
+So onto the bonus.  We will now show you an updated of the previous viz, describe some of the changes and ask that you give it a try.  
+
+DEMO....
+
+We now ask that you edit at least two of the four attributes we demonstrated but by no means will rule out any additional changes that you "intuitively" figured out. Instructions are below...Happy Coding...
 
   * Download the [starter file](url) 	
   * Save file as your_name.html
-  * Upload the file to our [repo](https://github.com/D3-J2GWK/D3)
+  * Once changes are made upload the file to our [repo](https://github.com/D3-J2GWK/D3)
   * Briefly describe what you did to the class
 
 ##Glossary 
