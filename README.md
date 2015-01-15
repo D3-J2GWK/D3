@@ -58,8 +58,6 @@ in this next example, there is a data array with a 4th element inside, â€œ293.â€
 var circle = svg.selectAll("circle").data([32, 57, 112, 293]);
 var circleEnter = circle.enter().append("circle");
 ```
-It is necessary when using these methods that elements are appended and selected from their correct parent element. In this case: 293 is attached to its parent data, which is the child of circle, which is selected from its parent element of svg. 
-
 The next step takes circles off of the page. similar to previous steps, we have to select an element by following its parent elements. however when removing elements it is as though we are swapping new arrays out with old ones. The .data() method adds a new array of circle attributes and the .exit() method applies passes these existing elements to the .remove() method never to be seen again. 
 ```javascript
 var circle = svg.selectAll("circle")
