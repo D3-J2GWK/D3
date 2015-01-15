@@ -62,7 +62,7 @@ It is necessary when using these methods that elements are appended and selected
 
  
 
-This next steps take circles off of the page. similar to previous steps, we have to select an element by following its parent elements. however when removing elements it is as though we are swapping new arrays out with old ones. the .data adds a new array of circle radiuses. the .exit method applies it to the circle variable, and the .remove() method removes the previous array of [32, 57, 112, 293]. 
+The next step takes circles off of the page. similar to previous steps, we have to select an element by following its parent elements. however when removing elements it is as though we are swapping new arrays out with old ones. the .data adds a new array of circle radiuses. the .exit method applies it to the circle variable, and the .remove() method removes the previous array of [32, 57, 112, 293]. 
 ```javascript
 var circle = svg.selectAll("circle")
 .data([32, 57]
