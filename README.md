@@ -1,6 +1,6 @@
 #D3 Tutorial
 ##Data Visualization
-One of the hotest technology keywords used today across all industries is Data Visualization.  The primary goal of DV has always been to communicate information clearly\efficiently and, for the longest time, was limited to using expensive\complex tools that produced standard excel-like graphs(line,bar,ect...).  However the current demand in today's marketplace is that of innovation and flexibiliy, specifically in HOW the data is displaed and the open source community has stepped up to the challenge by creating some amazing tools and javascript librarys to make fill this need.  The only limitation...your imagination.  
+One of the hotest technology keywords used today across all industries is Data Visualization.  The primary goal of DV has always been to communicate information clearly\efficiently and, for the longest time, was limited to using expensive\complex tools that produced standard excel-like graphs(line,bar,ect...).  However the current demand in today's marketplace is that of innovation and flexibiliy, specifically in HOW the data is displaed and taliored to a specific audience. Once again the open source community has stepped up to the challenge by creating some amazing tools and javascript librarys to fill this need.  The only limitation...your imagination....WOOOAAAA...
 
 ##Intro To D3
 D3 stands for Data Driven Documentation and is a JavaScript library created by Mike Bostock.  d3.js6 is “a JavaScript library for manipulating documents based on data”.  D3 is all about helping you to take information and make it more accessible to others via a web browser.  
@@ -11,6 +11,7 @@ The give you a better idea of it's capabilites let's look at the following examp
   * Mike Bostock's: [Congressional Network Analysis](http://christopherroach.com/pydata2013/)
   * Paul MacGregors: [Home Page]( http://p--m.co/ )
 
+Check out the following [site](http://techslides.com/over-2000-d3-js-examples-and-demos) to see over 2000 additional samples
 ##Demo
 D3 is very frequently used in conjunction with the <svg> tag and is used to create scalable vector graph images and contains many of the same properties used for the <canvas> tab.  There is a “height" and "width" attibute that define the dimensions of the element and within the <svg> tags we will be placing one or more <circle> tags, to generalte circles.  Circle require the “cx”,“cy” and "r" attributes, that determine the coordinates for the center of the circle graphics in relation to the top left of the svg element, the radius for it's size and “fill” to colorize the the graphic.
 
