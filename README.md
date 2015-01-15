@@ -11,57 +11,137 @@ The give you a better idea of it's capabilites let's look at the following examp
   * Mike Bostock's: [Congressional Network Analysis](http://christopherroach.com/pydata2013/)
   * Paul MacGregors: [Home Page]( http://p--m.co/ )
 
+##Demo
+D3 is very frequently used in conjunction with the <svg> (scalable vector graphics) HTML tag, and it will also be used for the purpose of this tutorial. There is a “height" and "width" attibute for the svg tag that define the dimensions of the element. Within the <svg> tags, we will be placing <circle> tags, which creates a circle svg. <circle> tags have “cx” and “cy” attributes, that determine the coordinates for the center of the circle graphics in relation to the top left of the svg element. There is also a “r” attribute for radius, and “fill” will determine the color within the borders of the graphic.
 
 ```javascript
-<body>
 <svg width="720" height="720">
   <circle cx="40" cy="60" r="10"></circle>
   <circle cx="80" cy="60" r="10"></circle>
   <circle cx="120" cy="60" r="10"></circle>
 </svg>
 ```  
-at the bottom of the body tag and inside a script tage, place a source tag:
+at the bottom of the body tag and inside a script tag, place a source tag:
 
 ```javascript
-<script
-src="http://d3js.org/d3.v3.min.js" charset="utf-8">
-</script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"> </script>
 ```
-
+To begin implementing d3 within the html, we need to use d3 select methods to assign elements of the DOM to javascript variables. d3.select(“svg”) will return the first element with the DOM that is a <svg>, svg.selectAll(“circle”) will return all <circle> elements from the document inside an array. 
 
 ```javascript
 var svg = d3.select("svg");
 var circle = svg.selectAll("circle");
 ```
-
+Now that all the circles are assigned to the circles array, we can begin to use D3’s .style and .attr methods to change their appearance and location.
 
 ```javascript
 circle.style("fill", "steelblue");
 circle.attr("r", 30);
 ```
+The above code will change the value of “fill” to the color ”steelblue" for every circle on the page. Any value that can be set on the circles( or any element) through css , can be changed by the style method. Had we used standard javascript, we would have to explicitly iterate through the “circle” array, this is not the case with D3. The .attr works in a manner similar to the .style method. The attribute to be changed is specified first, in the above case the “r” attribute, followed by the value of 30. An anonymous function may be used in place of a specific value, this is what allows data to be applied to the html in ways that are visually dramatic.
 
 ```javascript
 circle.attr("cx", function() { return Math.random() * 720; });
 ```
+The .data method is a crucial part of what makes D3 so powerful. It is what binds the data to the selected elements, which can then in turn be assigned to different values or passed into functions as mentioned previously. Each piece of data in the array below, will be bound to the circle with a corresponding index in the "circle" array.
 
 ```javascript
 circle.data([32, 57, 112]);
 ```
+Bound data can be passed as the first argument of a function used in an attr or style method, and conventionally it will be represented with a “d”. The index of the element within its array is also available as a second argument. This can be useful when positioning elements relative to one another in a deliberate manner.
+
 ```javascript
 circle.attr("cx", function(d, i) { return i * 100 + 30; });
 ```
+in this next example, there is a data array with a 4th element inside, “293.” Because 293 does not have a corresponding DOM element to append to, we must use the .enter().append() methods to create an additional circle in which we can provide it with a radius of 293.
 ```javascript
 var circle = svg.selectAll("circle").data([32, 57, 112, 293]);
 var circleEnter = circle.enter().append("circle");
 ```
+It is necessary when using these methods that elements are appended and selected from their correct parent element. In this case: 293 is attached to its parent data, which is the child of circle, which is selected from its parent element of svg. 
+
+ 
+
+The next step takes circles off of the page. similar to previous steps, we have to select an element by following its parent elements. however when removing elements it is as though we are swapping new arrays out with old ones. the .data adds a new array of circle radiuses. the .exit method applies it to the circle variable, and the .remove() method removes the previous array of [32, 57, 112, 293]. 
 ```javascript
 var circle = svg.selectAll("circle")
 .data([32, 57]
 circle.exit().remove();
 ``` 
+you cannot take away an array without both the .exit and the .remove methods. 
 
-glossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossaryglossary
+##Final Review
+Now that you have a better understanding of several key D3 methods, specifically .attr() and .style(), we'd like to review one additional visualization followed by a challenge..should you choose to accept...and if we feel up to it, perhaps award some fabulous prizes to "Most Original Data Viz".  
 
+The following viz titled ["General Update Pattern"]( http://bl.ocks.org/mbostock/3808234) is another Mike Bostock creation pulled from the list of over 2800 demo's, and is an excelent example of several previously reviewed key D3 methods and newly introducted ones, such as transition(). It also includes several well written update and randomization functions. Take moment to [download]() it from the github repository and open in a browser. 
+
+The most prominent feature of this viz is transition and what appers to be pre and post states of data, in this case the alphabet.  Let's quickly review how this is done and then ask that you add some artistic flare in makeing some customizations based on your preferences.  
+
+We first use D3 to enter the Data Join phase, where existing data is merged with incoming data and a distinction made between existing, overlapping and data that should be removed.  
+
+```javascript
+    // DATA JOIN
+    // Join new data with old elements, if any.
+    var text = svg.selectAll("text")
+    .data(data, function(d) { return d; });
+```
+
+Now the Update phase to edit properties of any previous existing data. Here we see same .attr() and .style() methods as before, representing the x axis point and font-family.  We can see that the index (i) value is being multiplied by 32 for each data element in the pipeline forcing the existing data to reposition. 
+
+```javascript
+    // UPDATE
+    // Update old elements as needed.
+    text.attr("class", "update")
+      .transition()
+      	.duration(750)
+      	.attr("x", function(d, i) { return i * 32; })
+      	.style("fill","black");
+```   
+Now we enter the Enter() phase. Once again the transision() method is being used to visually change the data as well as reposition all data. Pay particular attention the the pre .attr("y", -60) and post .attr("y", 0) attribute values and style().  
+
+```javascript
+     // ENTER
+    // Create new elements as needed.
+      text.enter().append("text")
+      .attr("class", "enter")
+      .attr("dy", ".35em")
+      .attr("y", -60)
+      .attr("x", function(d, i) { return i * 32; })
+      .style("fill-opacity", 1e-6)
+      .text(function(d) { return d; })
+    .transition()
+      .duration(750)
+      .attr("y", 0)
+      .style("fill-opacity", 1);
+      
+```
+Finally the Exit() phase where data is tranistioned out of the vis. Yet again pay attention to the .attr("y", 60) and .style("fill-opacity", 1e-6) attribute values along with the remove() method. 
+
+```javascript
+  // EXIT
+  // Remove old elements as needed.
+    text.exit()
+      .attr("class", "exit")
+    .transition()
+      .duration(750)
+      .attr("y", 60)
+      .style("fill-opacity", 1e-6)
+      .remove();
+```
+   
+##Bonus
+So onto the bonus.  We will now show you an updated of the previous viz, describe some of the changes and ask that you give it a try.  
+
+DEMO....
+
+We now ask that you edit at least two of the four attributes we demonstrated but by no means will rule out any additional changes that you "intuitively" figured out. Instructions are below...Happy Coding...
+
+  * Download the [starter file](url) 	
+  * Save file as your_name.html
+  * Once changes are made upload the file to our [repo](https://github.com/D3-J2GWK/D3)
+  * Briefly describe what you did to the class
+
+##Glossary 
 
 *Selecting Elements
 —selection: the array of elements pulled from the current document. 	
