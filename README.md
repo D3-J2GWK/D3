@@ -136,9 +136,9 @@ DEMO....
 
 We now ask that you edit at least two of the four attributes we demonstrated but by no means will rule out any additional changes that you "intuitively" figured out. Instructions are below...Happy Coding...
 
-  * Download the [starter file](url) 	
-  * Save file as your_name.html
-  * Once changes are made upload the file to our [repo](https://github.com/D3-J2GWK/D3)
+  * Download the [bonus.html file](https://github.com/D3-J2GWK/D3/blob/master/bonus.html) 	
+  * Save it as your_name.html
+  * Upload the file to our [repo](https://github.com/D3-J2GWK/D3) once changes are made
   * Briefly describe what you did to the class
 
 ##Glossary 
