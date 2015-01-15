@@ -13,7 +13,9 @@ The give you a better idea of it's capabilites let's look at the following examp
 
 Check out the following [site](http://techslides.com/over-2000-d3-js-examples-and-demos) to see over 2000 additional samples
 ##Demo
-D3 is very frequently used in conjunction with the <svg> tag and is used to create scalable vector graph images and contains many of the same properties used for the <canvas> tab.  There is a “height" and "width" attibute that define the dimensions of the element and within the <svg> tags we will be placing one or more <circle> tags, to generalte circles.  Circle require the “cx”,“cy” and "r" attributes, that determine the coordinates for the center of the circle graphics in relation to the top left of the svg element, the radius for it's size and “fill” to colorize the the graphic.
+The following demo has been created to walk through the basics of D3 by creating circles.  A [circletempale.html](https://github.com/D3-J2GWK/D3/blob/master/circletemplate.html) file has been provided to help faciliate the excercise and only requires that the code blocks be uncommented in order to execute the code blocks.  Please take a moment to download and run in your browser.
+
+D3 is very frequently used in conjunction with the <svg> tag and is used to create scalable vector graph images which contain many of the same properties used by the <canvas> tag.  There is a “height" and "width" attibute that define the dimensions of the element and within the <svg> tags we will be adding one or more <circle> tags, to generalte...well...circles.  Circles require the “cx”,“cy” and "r" attributes, which determine the coordinates for placement and size of the circle.
 
 ```javascript
 <svg width="720" height="720">
