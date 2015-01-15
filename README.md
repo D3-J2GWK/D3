@@ -48,7 +48,7 @@ The .data method is a crucial part of what makes D3 so powerful. It is what bind
 ```javascript
 circle.data([32, 57, 112]);
 ```
-Bound data can be used as the first argument of a function used in an attr or style method, and conventionally it will be represented with a “d”. The index of the element within the larger array is also available as a second argument. This can be useful when positioning elements relative to one another in a deliberate manner.
+Bound data can be passed as the first argument of a function used in an attr or style method, and conventionally it will be represented with a “d”. The index of the element within its array is also available as a second argument. This can be useful when positioning elements relative to one another in a deliberate manner.
 
 ```javascript
 circle.attr("cx", function(d, i) { return i * 100 + 30; });
