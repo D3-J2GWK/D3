@@ -11,6 +11,7 @@ The give you a better idea of it's capabilites let's look at the following examp
   * Mike Bostock's: [Congressional Network Analysis](http://christopherroach.com/pydata2013/)
   * Paul MacGregors: [Home Page]( http://p--m.co/ )
 
+##Demo
 D3 is very frequently used in conjunction with the <svg> (scalable vector graphics) HTML tag, and it will also be used for the purpose of this tutorial. There is a “height" and "width" attibute for the svg tag that define the dimensions of the element. Within the <svg> tags, we will be placing <circle> tags, which creates a circle svg. <circle> tags have “cx” and “cy” attributes, that determine the coordinates for the center of the circle graphics in relation to the top left of the svg element. There is also a “r” attribute for radius, and “fill” will determine the color within the borders of the graphic.
 
 ```javascript
