@@ -2,10 +2,10 @@
 This tutorial was created during a group project during a 3 month Web Development Immersive class at General Assembly.  The following uses contributed to this tutorial:
 
 * [Joe Keohan](https://github.com/jkeohan)
-* Will Wilcox
-* Kyle Hogan
-* Genevieve Gorta
-* Gabriel Aldana
+* [Will Wilcox](https://github.com/wwilco)
+* [Kyle Hogan](https://github.com/kyle1980)
+* [Genevieve Gorta](https://github.com/ggorta)
+* [Gabriel Aldana](https://github.com/gabrielaldana87)
 
 ##Data Visualization
 One of the hotest technology keywords used today across all industries is Data Visualization.  The primary goal of DV has always been to communicate information clearly\efficiently and, for the longest time, was limited to using expensive\complex tools that produced standard excel-like graphs(line,bar,ect...).  However the current demand in today's marketplace is that of innovation and flexibiliy, specifically in HOW the data is displaed and taliored to a specific audience. 
