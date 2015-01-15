@@ -17,6 +17,8 @@ The following demo has been created to walk through the basics of D3 by creating
 
 D3 is very frequently used in conjunction with the <svg> tag and is used to create scalable vector graph images which contain many of the same properties used by the <canvas> tag.  There is a “height" and "width" attibute that define the dimensions of the element and within the <svg> tags we will be adding one or more <circle> tags, to generalte...well...circles.  Circles require the “cx”,“cy” and "r" attributes, which determine the coordinates for placement and size of the circle.
 
+So even without even using D3 one is still able to generate circles using the following lines which has also been included in the template.
+
 ```javascript
 <svg width="720" height="720">
   <circle cx="40" cy="60" r="10"></circle>
@@ -24,12 +26,12 @@ D3 is very frequently used in conjunction with the <svg> tag and is used to crea
   <circle cx="120" cy="60" r="10"></circle>
 </svg>
 ```  
-At the bottom of the body tag and inside a script tag, place a source tag:
+In order to actually start using D3 we will need to make sure it is referenced somewhere in our file.  At the bottom of the body tag and inside a script tag you should see a refernce to the following:
 
 ```javascript
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"> </script>
 ```
-To begin implementing d3 within the html, we need to use d3 select methods to assign elements of the DOM to javascript variables. d3.select(“svg”) will return the first element in the document with the specified selector, in this case it is the <svg>.  The svg.selectAll(“circle”) will then return all <circle> elements that are children of the svg.
+To begin implementing D3 we need to use it's select() and selectAll() methods to begin assigning the existing svg and circle elements of the DOM to javascript variables. D3.select(“svg”) will return the first element in the document with the specified selector, in this case the <svg> tag.  The svg.selectAll(“circle”) will then return ALL <circle> elements that are children of the svg.  Take moment to uncomment this line of code in the Step 1 section of the template and refresh your browswer.
 
 ```javascript
 var svg = d3.select("svg");
