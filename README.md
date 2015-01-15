@@ -71,7 +71,11 @@ circle.exit().remove();
 you cannot take away an array without both the .exit and the .remove methods. 
 
 ##Bonus
-Win fabulous prizes by making your own changes to the alphabet animation. You must edit at least two of the four attributes we demonstrated in [link to file](url) and [link to file](url) (x axis, y axis, color, and opacity), but you are welcome to experiment further.
+Now that you have a better understanding of several key D3 methods, specifically .attr() and .style(), we'd like to review one additional visualization followed by a challenge..should you choose to accept...and if we feel up to it, perhaps award some fabulous prizes to "Most Original Data Viz".  
+
+The following viz titled ["General Update Pattern"]( http://bl.ocks.org/mbostock/3808234) is another Mike Bostock creation pulled from the list of over 2800 demo's, and is an excelent example of several key D3 methods and additional well written update and randomization functions. Take moment to [download]() it from the github repository and open in a browser. 
+
+You must edit at least two of the four attributes we demonstrated in [link to file](url) and [link to file](url) (x axis, y axis, color, and opacity), but you are welcome to experiment further.
 
   * Download the [starter file](url) 	
   * Save file as your_name.html
