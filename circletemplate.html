@@ -27,7 +27,7 @@
   // circle.attr("r", function(d) { return Math.sqrt(d); });
 
   // //-Step #Optional, can use the index of an element in its selection. this will override you function above.
-  // // circle.attr("cx", function(d, i) { return i * 100 + 30; });
+  // circle.attr("cx", function(d, i) { return i * 100 + 30; });
 
   // //-Step #4, create a 4th circle using .enter method -When joining data to elements, D3 puts any leftover data — or equivalently “missing” elements — in the enter selection
   // var circle = svg.selectAll("circle").data([32, 57, 112, 293]);
@@ -41,9 +41,9 @@
   // circle.style("fill", "steelblue");
 
   // //-Step #6, remove a circle with exit method. allows you to select multiple elements
-  // // var circle = svg.selectAll("circle")
-  // // .data([32, 57]);
-  // // circle.exit().remove();
+  // var circle = svg.selectAll("circle")
+  // .data([32, 57]);
+  // circle.exit().remove();
 
   // //-Step #7, us this code in the DOM
   // .data([32, 57, 293], function(d) { return d; });
