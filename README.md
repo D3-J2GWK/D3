@@ -100,13 +100,13 @@ The .data method that is a part of D3 allows for easy rendering of data. This .d
 D3 can read a couple of different data files via type-specific convenience methods such as:
 
 d3.json:
-## d3.text(url[, mimeType][, callback])
+#### d3.text(url[, mimeType][, callback])
 Creates a request for a JSON file at a specified url.
 d3.csv:
-### d3.csv(url[, accessor][, callback])
+#### d3.csv(url[, accessor][, callback])
 Creates a request for a CSV file in a particular directory. A callback is introduced to convert the data set into arrays indicating the key and value pairs to be picked up by the .data method.
 d3.tsv:
-#### d3.tsv(url[, accessor][, callback])
+##### d3.tsv(url[, accessor][, callback])
 Creates a request for TSV file at indicated URL. A callback can be asynchronously specified to mutate the data types to a data type D3 can pick up with the .data method.
 
 Example:
