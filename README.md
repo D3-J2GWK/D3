@@ -87,7 +87,66 @@ Take moment to uncomment this line of code in the Step 7 section of the template
 var circle = svg.selectAll("circle").data([32, 57, 112, 293]
 circle.exit().remove();
 ``` 
+##Data Sources
 
+The .data method that is a part of D3 allows for easy rendering of data. This .data method is built to iterate through an external or internal data set, which is accessible as continous arrays.
+
+####Example:
+
+* Unemployment Rate Choropleth: ["Connecting to an external data file" ](http://bl.ocks.org/mbostock/4060606)
+
+###Accessing External Data Sets
+
+D3 can read a couple of different data files via type-specific convenience methods such as:
+
+d3.json:
+# d3.text(url[, mimeType][, callback])
+Creates a request for a JSON file at a specified url.
+d3.csv:
+# d3.csv(url[, accessor][, callback])
+Creates a request for a CSV file in a particular directory. A callback is introduced to convert the data set into arrays indicating the key and value pairs to be picked up by the .data method.
+d3.tsv:
+# d3.tsv(url[, accessor][, callback])
+Creates a request for TSV file at indicated URL. A callback can be asynchronously specified to mutate the data types to a data type D3 can pick up with the .data method.
+
+Example:
+```javascript
+d3.tsv, "unemployment.tsv", function(d) { rateById.set(d.id, +d.rate);}
+```
+
+More Data Sources and Documentation on each:
+
+["Convenience Methods" ](https://github.com/mbostock/d3/wiki/Requests#d3_tsv)
+
+##Binding Data
+
+"Data visualization is a process of mapping data to visuals".
+-Scott Murray
+
+
+The act of attaching data to visuals is done through data-binding. D3 has developed an efficient way to do so by appending data values to elements in the DOM.
+
+We do so by using the selection.data() method.
+
+As was indicated in the paragraph on convenience methods, all you need is a data set. For now we will use a simple array as an example of data we are introducing into this method.
+
+```javascript
+var array = [10,8,5,1,9,7];
+  ```
+
+How do we render new DOM elements using D3?
+By using the enter() method to create placeholder elements we will want to associate to the data. In this case we will create placeholder li tags.
+```javascript
+d3.select("body").selectAll("li")
+.data(array)
+.enter()
+.append("li")
+.attr("innerText",d);
+  ```
+
+
+
+["Binding data" ](http://alignedleft.com/tutorials/d3/binding-data)
 ##Final Review
 Now that you have a better understanding of several key D3 methods, specifically .attr() and .style(), we'd like to review one additional visualization followed by a challenge..should you choose to accept...and if we feel up to it, perhaps award some fabulous prizes to "Most Original Data Viz".  
 
