@@ -128,6 +128,7 @@ d3.tsv, "unemployment.tsv", function(d) { rateById.set(d.id, +d.rate);}
 More Data Sources and Documentation on each:
 
 ["Convenience Methods" ](https://github.com/mbostock/d3/wiki/Requests#d3_tsv)
+Google Docs Connectors:  [Sheetsee](http://jlord.us/sheetsee.js/) | [Miso](http://misoproject.com/)
 
 ##Binding Data
 
