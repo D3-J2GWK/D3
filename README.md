@@ -2,7 +2,7 @@
 ##Data Visualization
 One of the hotest technology keywords used today across all industries is Data Visualization.  The primary goal of DV has always been to communicate information clearly\efficiently and, for the longest time, was limited to using expensive\complex tools that produced standard excel-like graphs(line,bar,ect...).  However the current demand in today's marketplace is that of innovation and flexibiliy, specifically in HOW the data is displaed and taliored to a specific audience. 
 
-Once again the open source community has stepped up to the challenge by creating some [amazing tools and javascript](http://www.fastcolabs.com/3029760/the-five-best-libraries-for-building-data-vizualizations) librarys to fill this need and where D3 stands out as the leader.  The only limitation...your imagination....WOOOAAAA...
+Once again the open source community has stepped up to the challenge by creating some [amazing tools and javascript](http://www.fastcolabs.com/3029760/the-five-best-libraries-for-building-data-vizualizations) librarys to fill this need and D3 stands out as the onvious leader.  
 
 ##Intro To D3
 D3 stands for Data Driven Documentation and is a JavaScript library created by Mike Bostock.  d3.js6 is “a JavaScript library for manipulating documents based on data”.  D3 is all about helping you to take information and make it more accessible to others via a web browser.  
