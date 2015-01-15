@@ -26,7 +26,7 @@ at the bottom of the body tag and inside a script tag, place a source tag:
 ```javascript
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"> </script>
 ```
-To begin implementing d3 within the html, we need to use d3 select methods to assign elements of the DOM to javascript variables. d3.select(“svg”) will return the first element with the DOM that is a <svg>, svg.selectAll(“circle”) will return all <circle> elements from the document inside an array. 
+To begin implementing d3 within the html, we need to use d3 select methods to assign elements of the DOM to javascript variables. d3.select(“svg”) will return the first element in the document with the specified selector, in this case it is the <svg>, svg.selectAll(“circle”) will return all <circle> elements that are children of the svg inside an array. 
 
 ```javascript
 var svg = d3.select("svg");
