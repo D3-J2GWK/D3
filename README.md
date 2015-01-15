@@ -84,9 +84,11 @@ We first use D3 to enter the Data Join phase, where existing data is merged with
     // Join new data with old elements, if any.
     var text = svg.selectAll("text")
     .data(data, function(d) { return d; });
+```
 
 Now the Update phase to edit properties of any previous existing data. Here we see same .attr() and .style() methods as before, representing the x axis point and font-family.  We can see that the index (i) value is being multiplied by 32 for each data element in the pipeline forcing the existing data to reposition. 
 
+```javascript
     // UPDATE
     // Update old elements as needed.
     text.attr("class", "update")
@@ -94,7 +96,7 @@ Now the Update phase to edit properties of any previous existing data. Here we s
       	.duration(750)
       	.attr("x", function(d, i) { return i * 32; });
 	 .style("font-family","Comic Sans")
-     
+```   
 Now we enter the Enter() phase. Once again the transision() method is being used to visually change the data as well as reposition all data. Pay particular attention the the pre .attr("y", -60) and post .attr("y", 0) attribute values and style().  
 
 ``javascript
@@ -111,7 +113,7 @@ Now we enter the Enter() phase. Once again the transision() method is being used
       .duration(750)
       .attr("y", 0)
       .style("fill-opacity", 1);
-
+```
 Finally the Exit() phase where data is tranistioned out of the vis. 
 
 ```javascript
@@ -124,7 +126,7 @@ Finally the Exit() phase where data is tranistioned out of the vis.
       .attr("y", 60)
       .style("fill-opacity", 1e-6)
       .remove();
-      
+```
    
 ##Bonus
 You must edit at least two of the four attributes we demonstrated in [link to file](url) and [link to file](url) (x axis, y axis, color, and opacity), but you are welcome to experiment further.
