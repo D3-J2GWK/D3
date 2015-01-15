@@ -1,4 +1,12 @@
 #D3 Tutorial
+This tutorial was created during a group project during a 3 month Web Development Immersive class at General Assembly.  The following uses contributed to this tutorial:
+
+* Joe Keohan
+* Will Wilcox
+* Kyle Hogan
+* Genevieve Gorta
+* Gabriel Aldana
+
 ##Data Visualization
 One of the hotest technology keywords used today across all industries is Data Visualization.  The primary goal of DV has always been to communicate information clearly\efficiently and, for the longest time, was limited to using expensive\complex tools that produced standard excel-like graphs(line,bar,ect...).  However the current demand in today's marketplace is that of innovation and flexibiliy, specifically in HOW the data is displaed and taliored to a specific audience. 
 
