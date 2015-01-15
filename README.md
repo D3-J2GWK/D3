@@ -94,8 +94,8 @@ Now the Update phase to edit properties of any previous existing data. Here we s
     text.attr("class", "update")
       .transition()
       	.duration(750)
-      	.attr("x", function(d, i) { return i * 32; });
-	 .style("font-family","Comic Sans")
+      	.attr("x", function(d, i) { return i * 32; })
+      	.style("fill","black");
 ```   
 Now we enter the Enter() phase. Once again the transision() method is being used to visually change the data as well as reposition all data. Pay particular attention the the pre .attr("y", -60) and post .attr("y", 0) attribute values and style().  
 
