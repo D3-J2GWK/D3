@@ -80,7 +80,7 @@ Take moment to uncomment the code in the Step 6 section of the template and refr
   //must reapply color
   circle.style("fill", "steelblue");
 ```
-The next step takes circles off of the page. similar to previous steps, we have to select an element by following its parent elements. however when removing elements it is as though we are swapping new arrays out with old ones. The .data() method adds a new array of circle attributes and the .exit() method applies passes these existing elements to the .remove() method never to be seen again. 
+The next step takes circles off of the page. similar to previous steps, we have to select an element by following its parent elements. however when removing elements it is as though we are swapping new arrays out with old ones. The .data() method adds a new array of circle attributes and the .exit() method passes these existing with no matching key to the .remove() method...never to be seen again...bye..bye...circele...
 
 Take moment to uncomment this line of code in the Step 7 section of the template and refresh your browswer.
 ```javascript
