@@ -1,7 +1,7 @@
 #D3 Tutorial
 This tutorial was created during a group project during a 3 month Web Development Immersive class at General Assembly.  The following uses contributed to this tutorial:
 
-* Joe Keohan
+* [Joe Keohan](https://github.com/jkeohan)
 * Will Wilcox
 * Kyle Hogan
 * Genevieve Gorta
