@@ -70,11 +70,63 @@ circle.exit().remove();
 ``` 
 you cannot take away an array without both the .exit and the .remove methods. 
 
-##Bonus
+##Final Review
 Now that you have a better understanding of several key D3 methods, specifically .attr() and .style(), we'd like to review one additional visualization followed by a challenge..should you choose to accept...and if we feel up to it, perhaps award some fabulous prizes to "Most Original Data Viz".  
 
-The following viz titled ["General Update Pattern"]( http://bl.ocks.org/mbostock/3808234) is another Mike Bostock creation pulled from the list of over 2800 demo's, and is an excelent example of several key D3 methods and additional well written update and randomization functions. Take moment to [download]() it from the github repository and open in a browser. 
+The following viz titled ["General Update Pattern"]( http://bl.ocks.org/mbostock/3808234) is another Mike Bostock creation pulled from the list of over 2800 demo's, and is an excelent example of several previously reviewed key D3 methods and newly introducted ones, such as transition(). It also includes several well written update and randomization functions. Take moment to [download]() it from the github repository and open in a browser. 
 
+The most prominent feature of this viz is transition and what appers to be pre and post states of data, in this case the alphabet.  Let's quickly review how this is done and then ask that you add some artistic flare in makeing some customizations based on your preferences.  
+
+We first use D3 to enter the Data Join phase, where existing data is merged with incoming data and a distinction made between existing, overlapping and data that should be removed.  
+
+```javascript
+    // DATA JOIN
+    // Join new data with old elements, if any.
+    var text = svg.selectAll("text")
+    .data(data, function(d) { return d; });
+
+Now the Update phase to edit properties of any previous existing data. Here we see same .attr() and .style() methods as before, representing the x axis point and font-family.  We can see that the index (i) value is being multiplied by 32 for each data element in the pipeline forcing the existing data to reposition. 
+
+    // UPDATE
+    // Update old elements as needed.
+    text.attr("class", "update")
+      .transition()
+      	.duration(750)
+      	.attr("x", function(d, i) { return i * 32; });
+	 .style("font-family","Comic Sans")
+     
+Now we enter the Enter() phase. Once again the transision() method is being used to visually change the data as well as reposition all data. Pay particular attention the the pre .attr("y", -60) and post .attr("y", 0) attribute values and style().  
+
+``javascript
+     // ENTER
+    // Create new elements as needed.
+      text.enter().append("text")
+      .attr("class", "enter")
+      .attr("dy", ".35em")
+      .attr("y", -60)
+      .attr("x", function(d, i) { return i * 32; })
+      .style("fill-opacity", 1e-6)
+      .text(function(d) { return d; })
+    .transition()
+      .duration(750)
+      .attr("y", 0)
+      .style("fill-opacity", 1);
+
+Finally the Exit() phase where data is tranistioned out of the vis. 
+
+```javascript
+  // EXIT
+  // Remove old elements as needed.
+    text.exit()
+      .attr("class", "exit")
+    .transition()
+      .duration(750)
+      .attr("y", 60)
+      .style("fill-opacity", 1e-6)
+      .remove();
+      
+   
+##Bonus
 You must edit at least two of the four attributes we demonstrated in [link to file](url) and [link to file](url) (x axis, y axis, color, and opacity), but you are welcome to experiment further.
 
   * Download the [starter file](url) 	
