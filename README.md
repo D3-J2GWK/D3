@@ -72,7 +72,7 @@ The following viz titled ["General Update Pattern"]( http://bl.ocks.org/mbostock
 
 The most prominent feature of this viz is transition and what appers to be pre and post states of data, in this case the alphabet.  Let's quickly review how this is done and then ask that you add some artistic flare in makeing some customizations based on your preferences.  
 
-We first use D3 to enter the Data Join phase, where existing data is merged with incoming data and a distinction made between existing, overlapping and data that should be removed.  
+We first use D3 to enter the Data Join phase, where existing data is merged with incoming data and a distinction is made between existing, overlapping and the data that should be removed.  
 
 ```javascript
     // DATA JOIN
@@ -125,11 +125,11 @@ Finally the Exit() phase where data is tranistioned out of the vis. Yet again pa
 ```
    
 ##Bonus
-So onto the bonus.  We will now show you an updated of the previous viz, describe some of the changes and ask that you give it a try.  
+So onto the bonus.  We will now show you an update of the previous viz, describe some of the changes and ask that you give it a try.  
 
 DEMO....
 
-We now ask that you edit at least two of the four attributes we demonstrated but by no means will rule out any additional changes that you "intuitively" figured out. Instructions are below...Happy Coding...
+We now ask that you edit at least two of the four attributes we demonstrated but by no means will rule out any additional changes that you "intuitively" figure out. Instructions are below...Happy Coding...
 
   * Download the [bonus.html file](https://github.com/D3-J2GWK/D3/blob/master/bonus.html) 	
   * Save it as your_name.html
