@@ -199,5 +199,3 @@ selection.exit()
 —remove: Removes the elements in the current selection from the current document. 
 selection.remove()
 
-*All Together
-n/a
