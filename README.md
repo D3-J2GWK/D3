@@ -70,7 +70,14 @@ circle.exit().remove();
 ``` 
 you cannot take away an array without both the .exit and the .remove methods. 
 
+##Bonus
+Win fabulous prizes by making your own changes to the alphabet animation. You must edit at least two of the four attributes we demonstrated in [link to file](url) and [link to file](url) (x axis, y axis, color, and opacity), but you are welcome to experiment further.
 
+*Download the [starter file](url) 
+*Make your desired edits
+*Save file as your_name.html
+*Upload the file to our [repo](https://github.com/D3-J2GWK/D3)
+* Briefly describe what you did to the class
 ##Glossary 
 
 *Selecting Elements
