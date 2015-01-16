@@ -8,7 +8,7 @@ This tutorial was created during a group project during a 3 month Web Developmen
 * [Gabriel Aldana](https://github.com/gabrielaldana87)
 
 ##Data Visualization
-One of the hotest technology keywords used today across all industries is Data Visualization.  The primary goal of DV has always been to communicate information clearly\efficiently and, for the longest time, was limited to using expensive\complex tools that produced standard excel-like graphs(line,bar,ect...).  However the current demand in today's marketplace is that of innovation and flexibiliy, specifically in HOW the data is displaed and taliored to a specific audience. 
+One of the hotest technology keywords used today across all industries is Data Visualization.  The primary goal of DV has always been to communicate information clearly\efficiently and, for the longest time, was limited to using expensive\complex tools that produced standard excel-like graphs(line,bar,ect...).  However the current demand in today's marketplace is that of innovation and flexibiliy, specifically in HOW the data is displaed and taliored to a specific audience.
 
 Once again the open source community has stepped up to the challenge by creating some [amazing tools and javascript](http://www.fastcolabs.com/3029760/the-five-best-libraries-for-building-data-vizualizations) librarys to fill this need and D3 stands out as the onvious leader.  
 
@@ -17,7 +17,7 @@ D3 stands for Data Driven Documentation and is a JavaScript library created by M
 
 The give you a better idea of it's capabilites let's look at the following examples:
 
-  * NYTimes article: ["A Chicago divided By Killings" ](http://www.nytimes.com/interactive/2013/01/02/us/chicago-killings.html) 
+  * NYTimes article: ["A Chicago divided By Killings" ](http://www.nytimes.com/interactive/2013/01/02/us/chicago-killings.html)
   * Mike Bostock's: [Congressional Network Analysis](http://christopherroach.com/pydata2013/)
   * Paul MacGregors: [Home Page]( http://p--m.co/ )
   * [Koalas to the Max](koalastothemax.com)
@@ -58,7 +58,7 @@ Take moment to uncomment this line of code in the Step 2 section of the template
 circle.style("fill", "steelblue");
 circle.attr("r", 30);
 ```
-The above code will change the value of “fill” to the color ”steelblue" for every circle on the page. Any value that can be set on the circles through css, can be changed using the style method. Had we used standard javascript, we would have to explicitly iterate through the “circle” array however D3 does a great job of doing this for us. Go D3...GO...The .attr works in a manner similar to the .style method. The attribute to be changed is specified first, in the above case the “r” attribute, followed by the value of 30. 
+The above code will change the value of “fill” to the color ”steelblue" for every circle on the page. Any value that can be set on the circles through css, can be changed using the style method. Had we used standard javascript, we would have to explicitly iterate through the “circle” array however D3 does a great job of doing this for us. Go D3...GO...The .attr works in a manner similar to the .style method. The attribute to be changed is specified first, in the above case the “r” attribute, followed by the value of 30.
 
 Take moment to uncomment this line of code in the Step 3 section of the template and refresh your browswer.
 
@@ -78,7 +78,7 @@ Take moment to uncomment the code in Step 5 section of the template and refresh 
 ```javascript
 circle.attr("cx", function(d, i) { return i * 100 + 30; });
 ```
-in this next example, there is a data array with a 4th element inside, “293.” Because 293 does not have a corresponding DOM element to append to, we must use the .enter().append() methods to create an additional circle in which we can provide it with additoinal attributes. 
+in this next example, there is a data array with a 4th element inside, “293.” Because 293 does not have a corresponding DOM element to append to, we must use the .enter().append() methods to create an additional circle in which we can provide it with additoinal attributes.
 
 Take moment to uncomment the code in the Step 6 section of the template and refresh your browswer.
 ```javascript
@@ -97,7 +97,7 @@ Take moment to uncomment this line of code in the Step 7 section of the template
 ```javascript
 var circle = svg.selectAll("circle").data([32, 57, 112, 293]
 circle.exit().remove();
-``` 
+```
 ##Data Sources
 
 The .data method that is a part of D3 allows for easy rendering of data. This .data method is built to iterate through an external or internal data set, which is accessible as continous arrays.
@@ -163,7 +163,7 @@ d3.select("body").selectAll("li")
 ##Final Review
 Now that you have a better understanding of several key D3 methods, specifically .attr() and .style(), we'd like to review one additional visualization followed by a challenge..should you choose to accept...and if we feel up to it, perhaps award some fabulous prizes to "Most Original Data Viz".  
 
-The following viz titled ["General Update Pattern"]( http://bl.ocks.org/mbostock/3808234) is another Mike Bostock creation pulled from the list of over 2800 demo's, and is an excelent example of several previously reviewed key D3 methods and newly introducted ones, such as transition(). It also includes several well written update and randomization functions. Take moment to [download]() it from the github repository and open in a browser. 
+The following viz titled ["General Update Pattern"]( http://bl.ocks.org/mbostock/3808234) is another Mike Bostock creation pulled from the list of over 2800 demo's, and is an excelent example of several previously reviewed key D3 methods and newly introducted ones, such as transition(). It also includes several well written update and randomization functions. Take moment to [download]() it from the github repository and open in a browser.
 
 The most prominent feature of this viz is transition and what appers to be pre and post states of data, in this case the alphabet.  Let's quickly review how this is done and then ask that you add some artistic flare in makeing some customizations based on your preferences.  
 
@@ -176,7 +176,7 @@ We first use D3 to enter the Data Join phase, where existing data is merged with
     .data(data, function(d) { return d; });
 ```
 
-Now the Update phase to edit properties of any previous existing data. Here we see same .attr() and .style() methods as before, representing the x axis point and font-family.  We can see that the index (i) value is being multiplied by 32 for each data element in the pipeline forcing the existing data to reposition. 
+Now the Update phase to edit properties of any previous existing data. Here we see same .attr() and .style() methods as before, representing the x axis point and font-family.  We can see that the index (i) value is being multiplied by 32 for each data element in the pipeline forcing the existing data to reposition.
 
 ```javascript
     // UPDATE
@@ -186,7 +186,7 @@ Now the Update phase to edit properties of any previous existing data. Here we s
       	.duration(750)
       	.attr("x", function(d, i) { return i * 32; })
       	.style("fill","black");
-```   
+```
 Now we enter the Enter() phase. Once again the transision() method is being used to visually change the data as well as reposition all data. Pay particular attention the the pre .attr("y", -60) and post .attr("y", 0) attribute values and style().  
 
 ```javascript
@@ -203,9 +203,9 @@ Now we enter the Enter() phase. Once again the transision() method is being used
       .duration(750)
       .attr("y", 0)
       .style("fill-opacity", 1);
-      
+
 ```
-Finally the Exit() phase where data is tranistioned out of the vis. Yet again pay attention to the .attr("y", 60) and .style("fill-opacity", 1e-6) attribute values along with the remove() method. 
+Finally the Exit() phase where data is tranistioned out of the vis. Yet again pay attention to the .attr("y", 60) and .style("fill-opacity", 1e-6) attribute values along with the remove() method.
 
 ```javascript
   // EXIT
@@ -218,7 +218,7 @@ Finally the Exit() phase where data is tranistioned out of the vis. Yet again pa
       .style("fill-opacity", 1e-6)
       .remove();
 ```
-   
+
 ##Bonus
 So onto the bonus.  We will now show you an update of the previous viz, describe some of the changes and ask that you give it a try.  
 
@@ -226,48 +226,39 @@ DEMO....
 
 We now ask that you edit at least two of the four attributes we demonstrated but by no means will rule out any additional changes that you "intuitively" figure out. Instructions are below...Happy Coding...
 
-  * Download the [bonus.html file](https://github.com/D3-J2GWK/D3/blob/master/bonus.html) 	
+  * Download the [bonus.html file](https://github.com/D3-J2GWK/D3/blob/master/bonus.html)
   * Save it as your_name.html
   * Upload the file to our [repo](https://github.com/D3-J2GWK/D3) once changes are made
   * Briefly describe what you did to the class
 
-##Glossary 
+##Glossary
 
-*Selecting Elements
-—selection: the array of elements pulled from the current document. 	
+* append: Appends a new element with the specified name as the last child of each element in the current selection, returning a new selection containing the appended elements.
+*selection.append(name)*
 
-—d3.selectAll: a method that selects all elements that match the specified selector. The elements will be selected in the document from top-to-bottom. 
+* d3.selectAll: a method that selects all elements that match the specified selector. The elements will be selected in the document from top-to-bottom.
 
-—selection.style: sets the CSS style property with the specified name to the specified value on all selected elements. 
-selection.style(name:value)
-—selection.property: sets the property with the specified name to the specified value on all selected elements. This can be used for the HTML elements have special properties that are not addressable using standard attributes or styles.
-selection.property(name:value)
+* enter: Returns placeholder nodes for each data element in the current selection that doesn’t have a corresponding existing DOM element.
+*selection.enter()*
 
-—scales: are an optional feature in D3. They are functions that map from an input domain (like a a set of numbers or names) to an output range. They can be used to simplify the code needed to map a dimension of data to a visual representation.
- 
+* exit: returns  the existing DOM elements in the current selection for which no new data element was found.
+*selection.exit()*
 
-—shapes: SVG has a number of built-in simple shapes, such as axis-aligned rectangles and circles. For greater flexibility, you can draw shapes using D3's path data generators. 
+* Method Chaining: syntax that allows several method calls to be chained together in a single statement.
 
-	
-*Binding Data
+* remove: Removes the elements in the current selection from the current document.
+*selection.remove()*
 
-—selection.data: Joins the specified array of data with the current selection. The specified values is an array of data values (like numbers or objects) or a function that returns an array of values. 
+* scales: are an optional feature in D3. They are functions that map from an input domain (like a a set of numbers or names) to an output range. They can be used to simplify the code needed to map a dimension of data to a visual representation.
 
+* selection: the array of elements pulled from the current document.
 
-*Entering Elements
+* selection.data: Joins the specified array of data with the current selection. The specified values is an array of data values (like numbers or objects) or a function that returns an array of values.
 
-—enter: Returns placeholder nodes for each data element in the current selection that doesn’t have a corresponding existing DOM element.
- selection.enter()
+* selection.property: sets the property with the specified name to the specified value on all selected elements. This can be used for the HTML elements have special properties that are not addressable using standard attributes or styles.
+*selection.property(name:value)*
 
-—append: Appends a new element with the specified name as the last child of each element in the current selection, returning a new selection containing the appended elements.
-selection.append(name)
-—Method Chaining: syntax that allows several method calls to be chained together in a single statement.
+* selection.style: sets the CSS style property with the specified name to the specified value on all selected elements.
+*selection.style(name:value)*
 
-
-*Exiting Elements	
-
-—exit: returns  the existing DOM elements in the current selection for which no new data element was found.
-selection.exit()
-—remove: Removes the elements in the current selection from the current document. 
-selection.remove()
-
+* shapes: SVG has a number of built-in simple shapes, such as axis-aligned rectangles and circles. For greater flexibility, you can draw shapes using D3's path data generators.
